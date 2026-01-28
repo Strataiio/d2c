@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>stratai.io | Engineering Profitable Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #FF5C00;
+            --accent-glow: rgba(255, 92, 0, 0.4);
+            --bg: #000000;
+            --surface: #0A0A0A;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Noise Texture Overlay */
+        .noise::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.04;
+            background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+        }
+
+        .text-reveal {
+            background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, rgba(255,255,255,0.3) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #FF9900 0%, #FF5C00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 92, 0, 0.3);
+            transform: translateY(-4px);
+        }
+
+        /* Ambient Light Leaks */
+        .light-leak {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255, 92, 0, 0.08) 0%, transparent 70%);
+            filter: blur(100px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .btn-premium {
+            background: #ffffff;
+            color: #000000;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.75rem;
+        }
+
+        .btn-premium:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.75rem;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #ffffff;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .animate-float {
+            animation: float 10s infinite ease-in-out;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000000; }
+        ::-webkit-scrollbar-thumb { background: #222222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #333333; }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/REPO-NAME/assets/index-CquweoZd.js"></script>
+</head>
+<body class="noise">
+    <div id="root"></div>
+</body>
+</html>
